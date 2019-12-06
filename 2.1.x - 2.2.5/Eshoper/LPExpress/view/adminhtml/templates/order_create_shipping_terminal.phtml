@@ -1,0 +1,27 @@
+<?php
+/**
+ * Terminal select in adminhtml_order_create_shipping_method
+ *
+ * @package    Eshoper/LPExpress/Block/Adminhtml/Form/Field
+ * @author     MB "Eshoper" <pagalba@noriusvetaines.lt>
+ * @version    1.0.1
+ * @since      File available since Release 1.0.1
+ */
+
+/** @var \Eshoper\LPExpress\Block\Adminhtml\Order\Create\Terminal $block */
+?>
+<?php if ( $block->showSelect () ): ?>
+    <div style="padding-top:10px; display: flex">
+        <b><?php echo __( 'Terminal:'); ?> </b>&nbsp;&nbsp;
+        <select name="order[lpexpress_terminal]" id="lpexpress_terminal_select">
+            <option value=""><?php echo __( 'Please select LP Express terminal..' ); ?></option>
+            <?php foreach ( $block->getTerminalList () as $city => $terminalList ): ?>
+                <optgroup label="<?php echo $city; ?>">
+                    <?php foreach ( $terminalList as $terminalId => $terminal ): ?>
+                        <option value="<?php echo $terminalId; ?>"><?php echo $terminal; ?></option>
+                    <?php endforeach; ?>
+                </optgroup>
+            <?php endforeach; ?>
+        </select>
+    </div>
+<?php endif; ?>

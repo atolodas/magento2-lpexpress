@@ -1,0 +1,25 @@
+<?php
+/**
+ * Order shipping info template
+ *
+ * Display terminal or post office inside order_view
+ *
+ * @package    Eshoper/LPExpress/Plugin
+ * @author     MB "Eshoper" <pagalba@noriusvetaines.lt>
+ * @version    1.0.1
+ * @since      File available since Release 1.0.1
+ */
+?>
+<div id="lpexpress-block">
+    <strong><?=$block->getMethodName () ?></strong>
+    <span class="price"><?=$block->getMethodInfo() ?></span>
+</div>
+<script type="text/javascript">
+    require(
+        ['jquery'],
+        function($) {
+            var element = $('#lpexpress-block').detach();
+            $('.order-shipping-method').append(element);
+        }
+    );
+</script>

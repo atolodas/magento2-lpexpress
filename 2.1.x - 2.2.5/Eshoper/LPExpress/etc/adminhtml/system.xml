@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="carriers" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+            <group id="lpexpress" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>LP Express</label>
+                <field id="active" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="name" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Title</label>
+                </field>
+                <field id="test_mode" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Test Mode</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="api_id" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>API User ID</label>
+                </field>
+                <field id="api_key" translate="label" type="text" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>API User Password</label>
+                </field>
+                <field id="kepoluserid" translate="label" type="text" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Baltic Post User ID</label>
+                </field>
+                <field id="paymentpin" translate="label" type="text" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Baltic Post PIN</label>
+                </field>
+                <field id="adminpin" translate="label" type="text" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Baltic Post Admin PIN</label>
+                </field>
+                <field id="partner_key" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Partner Key</label>
+                </field>
+                <field id="allowedmethods" translate="label" type="multiselect" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Allowed methods</label>
+                    <source_model>Eshoper\LPExpress\Model\Carrier\LPExpress\Source\Method</source_model>
+                </field>
+                <field id="terminal_type" translate="label" type="select" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Terminal Shipping Type</label>
+                    <source_model>Eshoper\LPExpress\Model\Carrier\LPExpress\Source\TerminalType</source_model>
+                </field>
+                <field id="home_type" translate="label" type="select" sortOrder="13" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Home Shipping Type</label>
+                    <source_model>Eshoper\LPExpress\Model\Carrier\LPExpress\Source\HomeType</source_model>
+                </field>
+                <field id="overseas_type" translate="label" type="select" sortOrder="14" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Overseas Shipping Type</label>
+                    <source_model>Eshoper\LPExpress\Model\Carrier\LPExpress\Source\OverseasType</source_model>
+                    <comment>Go to http://api.balticpost.lt/docs/content/products.html for more information</comment>
+                </field>
+                <field id="label_format" translate="label" type="select" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Label Format</label>
+                    <source_model>Eshoper\LPExpress\Model\Carrier\LPExpress\Source\LabelType</source_model>
+                </field>
+                <field id="box_size" translate="label" type="select" sortOrder="16" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Default Box Size</label>
+                    <source_model>Eshoper\LPExpress\Model\Carrier\LPExpress\Source\BoxSize</source_model>
+                </field>
+                <field id="export" translate="label" type="Eshoper\LPExpress\Block\Adminhtml\Form\Field\Export" sortOrder="17" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Export Price vs Weight</label>
+                </field>
+                <field id="import" translate="label" type="Eshoper\LPExpress\Block\Adminhtml\Form\Field\Import" sortOrder="18" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Import Price vs Weight</label>
+                    <backend_model>Eshoper\LPExpress\Model\Config\Backend\Rates</backend_model>
+                </field>
+                <field id="courier_price" translate="label" type="text" sortOrder="19" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Courier Price</label>
+                    <validate>validate-number</validate>
+                    <comment>Leave empty if you want to use Price vs Weight table.</comment>
+                </field>
+                <field id="terminal_price" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Terminal Price</label>
+                    <validate>validate-number</validate>
+                    <comment>Leave empty if you want to use Price vs Weight table.</comment>
+                </field>
+                <field id="post_office_price" translate="label" type="text" sortOrder="21" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>To Post Office Price</label>
+                    <validate>validate-number</validate>
+                    <comment>Leave empty if you want to use Price vs Weight table.</comment>
+                </field>
+                <field id="overseas_export" translate="label" type="Eshoper\LPExpress\Block\Adminhtml\Form\Field\ExportOverseas" sortOrder="22" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Export Price vs Country</label>
+                </field>
+                <field id="overseas_import" translate="label" type="Eshoper\LPExpress\Block\Adminhtml\Form\Field\Import" sortOrder="23" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Import Price vs Country</label>
+                    <backend_model>Eshoper\LPExpress\Model\Config\Backend\OverseasRates</backend_model>
+                    <comment>Overseas price table.</comment>
+                </field>
+                <field id="overseas_price" translate="label" type="text" sortOrder="24" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Overseas Price</label>
+                    <validate>validate-number</validate>
+                    <comment>Leave empty if you want to use CSV prices.</comment>
+                </field>
+                <field id="sallowspecific" translate="label" type="select" sortOrder="25" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Ship to Applicable Countries</label>
+                    <frontend_class>shipping-applicable-country</frontend_class>
+                    <source_model>Magento\Shipping\Model\Config\Source\Allspecificcountries</source_model>
+                </field>
+                <field id="specificcountry" translate="label" type="multiselect" sortOrder="26" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Ship to Specific Countries</label>
+                    <source_model>Eshoper\LPExpress\Model\Carrier\LPExpress\Source\OverseasDestinations</source_model>
+                    <can_be_empty>1</can_be_empty>
+                </field>
+                <field id="sort_order" translate="label" type="text" sortOrder="27" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Sort Order</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

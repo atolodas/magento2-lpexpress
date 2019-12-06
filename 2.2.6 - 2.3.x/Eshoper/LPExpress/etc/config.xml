@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <carriers>
+            <lpexpress>
+                <active>0</active>
+                <sallowspecific>0</sallowspecific>
+                <model>Eshoper\LPExpress\Model\Carrier\LPExpress</model>
+                <name>LP Express</name>
+            </lpexpress>
+        </carriers>
+    </default>
+</config>

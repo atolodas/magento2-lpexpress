@@ -1,0 +1,12 @@
+<div data-bind="visible: selectedMethod () == 'lpexpress_terminal'">
+    <label data-bind="i18n: 'LP Express Terminal'"></label>
+    <select name="lpexpress-terminal" class="select-terminal-required" id="lpexpress-terminal-list" data-bind="html: getTerminalList ()"
+            data-mage-init='{"validation":{}}'>
+    </select>
+</div>
+<div data-bind="visible: selectedMethod () == 'lpexpress_post_office'" style="padding-bottom:20px">
+    <div id="lp-post-office-address">
+        <label data-bind="i18n: 'Nearest post office: '"></label>
+        <b data-mage-init='{"loader": {}}' data-bind="i18n: 'No post office found.'"></b>
+    </div>
+</div>

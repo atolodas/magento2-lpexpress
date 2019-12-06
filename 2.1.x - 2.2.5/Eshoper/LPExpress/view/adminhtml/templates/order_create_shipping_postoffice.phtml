@@ -1,0 +1,18 @@
+<?php
+/**
+ * Post office display adminhtml_order_create_shipping_method
+ *
+ * @package    Eshoper/LPExpress/Block/Adminhtml/Form/Field
+ * @author     MB "Eshoper" <pagalba@noriusvetaines.lt>
+ * @version    1.0.1
+ * @since      File available since Release 1.0.1
+ */
+
+/** @var \Eshoper\LPExpress\Block\Adminhtml\Order\Create\PostOffice $block */
+?>
+<?php if ( $block->showPostOffice () ): $postOffice = $block->getZipToPost (); ?>
+    <div style="padding-top: 10px">
+        <b><?php echo __( 'Nearest post office:'); ?> </b><label><?php echo $postOffice; ?></label>
+        <input type="hidden" name="order[lpexpress_post_office]" value="<?php echo $postOffice; ?>" />
+    </div>
+<?php endif; ?>
