@@ -1,6 +1,6 @@
 LP EXPRESS Magento 2 modulis
 
-* Lengvas ir patogus modulio įdiegiamas ir administravimas
+* Lengvas ir patogus modulio įdiegimas ir administravimas
 * Plačiausias siuntų pristatymo tinklas visoje Lietuvoje
 * Siuntimo sąlygų pritaikymas pagal jūsų poreikius
 
