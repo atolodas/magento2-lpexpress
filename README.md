@@ -1,11 +1,10 @@
 LP EXPRESS Magento 2 modulis
 
-* Lengvai įdiegiamas ir administruojamas
-* Pasirenkama pristatymo kaina pagal poreikius
-* Pagrindiniai LP EXPRESS pristatymo būdai
+* Lengvas ir patogus modulio įdiegiamas ir administravimas
+* Plačiausias siuntų pristatymo tinklas visoje Lietuvoje
+* PSiuntimo sąlygų pritaikymas pagal jūsų poreikius
 
-Lietuvos pašto LP EXPRESS kurjerių pristatymo ir savitarnos terminalų paslauga leis kiekvienam verslui turėti plačias galimybes. 
-Išbandykite naują bei nemokamą LP express modulį Magento 2 platformai ir auginkite savo e-verslus!
+Išbandykite naują bei nemokamą LP EXPRESS modulį Magento 2 platformai ir auginkite savo e-verslą!
 
 Visus klausimus susijusius su šio modulio integravimu ar priderinimu prie Jūsų
 el.parduotuvės rašykite lpexpress@eshoper.lt
